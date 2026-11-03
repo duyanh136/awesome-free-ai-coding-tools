@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freebuff AI - The Ultimate 100% Free Coding Agent & Cursor Alternative</title>
+    <meta name="description" content="Stop paying $20/month for AI coding tools. Freebuff provides free, ad-supported AI coding agents with high-end LLM support. Download now and get bonus hours!">
+    <meta property="og:title" content="Freebuff AI: The 100% Free Coding Agent">
+    <meta property="og:description" content="Experience Cursor-level AI coding capabilities without subscriptions. Claim bonus hours through our community invite.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0c10;
+            --bg-secondary: #12161f;
+            --bg-card: rgba(22, 27, 34, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --accent-green: #3fb950;
+            --accent-glow: rgba(63, 185, 80, 0.25);
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(63, 185, 80, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 65%, rgba(56, 139, 253, 0.06) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 12, 16, 0.85);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            font-size: 1.25rem;
+            letter-spacing: -0.5px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo-badge {
+            background: rgba(63, 185, 80, 0.15);
+            color: var(--accent-green);
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 999px;
+            border: 1px solid rgba(63, 185, 80, 0.3);
+            font-family: var(--font-mono);
+        }
+
+        .btn-header {
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        .btn-header:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(63, 185, 80, 0.1);
+            border: 1px solid rgba(63, 185, 80, 0.3);
+            color: var(--accent-green);
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #fff 30%, #3fb950 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto 36px;
+        }
+
+        .cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-cta {
+            background: var(--accent-green);
+            color: #0d1117;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 25px var(--accent-glow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 35px rgba(63, 185, 80, 0.45);
+        }
+
+        .cta-subtext {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Benchmark Cards */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 60px 0;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 28px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            transition: border-color 0.2s ease;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(63, 185, 80, 0.4);
+        }
+
+        .feature-icon {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .feature-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            margin: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .table-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.02);
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        td.highlight {
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+
+        /* How to start */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .step-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        .step-number {
+            font-family: var(--font-mono);
+            font-size: 2rem;
+            font-weight: 800;
+            color: rgba(63, 185, 80, 0.3);
+            margin-bottom: 12px;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 14px;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <a href="https://freebuff.com/?ref=ref-85237262-93c4-4b32-8727-d6f70562bf14" class="logo">
+                ⚡ Freebuff AI
+                <span class="logo-badge">100% Free</span>
+            </a>
+            <a href="https://freebuff.com/?ref=ref-85237262-93c4-4b32-8727-d6f70562bf14" class="btn-header">
+                Claim Invite Link →
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="pill-badge">
+                🎉 Exclusive Invite: Unlock Extra Hours & Premium Themes
+            </div>
+            <h1>
+                Code Faster with AI.<br>
+                <span class="gradient-text">Zero Monthly Subscriptions.</span>
+            </h1>
+            <p>
+                Tired of Cursor's $20/month subscription? Freebuff delivers full-featured AI coding assistance, multi-file editing, and agentic workflows—completely free and ad-supported.
+            </p>
+            <div class="cta-group">
+                <a href="https://freebuff.com/?ref=ref-85237262-93c4-4b32-8727-d6f70562bf14" class="btn-cta">
+                    <span>🚀 Get Freebuff with Bonus Hours</span>
+                </a>
+                <span class="cta-subtext">Requires GitHub login • Instant access on Windows, Mac & Linux</span>
+            </div>
+        </section>
+
+        <!-- Key Features Grid -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💸</div>
+                <div class="feature-title">$0 Always Free</div>
+                <div class="feature-desc">Subsidized by smart ads, eliminating costly $240/year subscriptions for developers, learners, and freelancers.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <div class="feature-title">Top-Tier AI Models</div>
+                <div class="feature-desc">Built for vibecoding, agentic code generation, context-aware debugging, and full project comprehension.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">Custom Themes & Styles</div>
+                <div class="feature-desc">Activate Alpine, Dune, and dark sleek developer themes tailored for prolonged coding sessions.</div>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <section class="comparison-section">
+            <div class="section-header">
+                <h2>Why Developers Are Switching to Freebuff</h2>
+                <p style="color: var(--text-muted)">Compare features and see the difference for yourself.</p>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Freebuff</th>
+                            <th>Cursor</th>
+                            <th>GitHub Copilot</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Cost per Month</strong></td>
+                            <td class="highlight">$0 (Free Forever)</td>
+                            <td>$20 / month</td>
+                            <td>$10 - $19 / month</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Credit Card Required</strong></td>
+                            <td class="highlight">No (GitHub login only)</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Agentic Multi-File Edits</strong></td>
+                            <td class="highlight">Included Free</td>
+                            <td>Included</td>
+                            <td>Limited</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Platform Support</strong></td>
+                            <td class="highlight">Windows, macOS, Linux</td>
+                            <td>Windows, macOS, Linux</td>
+                            <td>VS Code Plugin</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Community Referral Bonus</strong></td>
+                            <td class="highlight">Extra Hours + Cashout</td>
+                            <td>None</td>
+                            <td>None</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 3-Step Setup -->
+        <section class="comparison-section">
+            <div class="section-header">
+                <h2>How to Activate Your Bonus in 3 Simple Steps</h2>
+                <p style="color: var(--text-muted)">Takes less than 60 seconds to get up and running.</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="feature-title">Open Community Invite</div>
+                    <div class="feature-desc">Visit <a href="https://freebuff.com/?ref=ref-85237262-93c4-4b32-8727-d6f70562bf14" style="color: var(--accent-green); text-decoration: underline;">Freebuff Official Site</a> using this invite link to bind your bonus entitlement.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="feature-title">Sign in with GitHub</div>
+                    <div class="feature-desc">Authorize with your qualified GitHub account. No credit cards or billing information ever requested.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="feature-title">Install & Launch</div>
+                    <div class="feature-desc">Download Freebuff Desktop, launch your first coding prompt, and start building with zero limits!</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://freebuff.com/?ref=ref-85237262-93c4-4b32-8727-d6f70562bf14" class="btn-cta">
+                    Claim Your Freebuff Account Now →
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="comparison-section">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does Freebuff offer top AI models for free?</div>
+                <div class="faq-answer">Freebuff leverages an ethical, developer-centric ad-supported model. High-value tech sponsors subsidize token and GPU inference costs so developers never pay out of pocket.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why must I log in with a GitHub account?</div>
+                <div class="faq-answer">GitHub verification prevents abuse and bot accounts, ensuring server resources remain fast and accessible to legitimate developers and builders worldwide.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I use Freebuff alongside VS Code?</div>
+                <div class="faq-answer">Yes! Freebuff is a standalone desktop AI coding IDE that works with your existing projects, keybindings, and workflows right out of the box.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Freebuff Community Resource. Freebuff is an independent AI coding agent platform.</p>
+            <p style="margin-top: 6px;">
+                <a href="https://freebuff.com/?ref=ref-85237262-93c4-4b32-8727-d6f70562bf14" style="color: var(--accent-green); text-decoration: none;">Download Freebuff Desktop</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
