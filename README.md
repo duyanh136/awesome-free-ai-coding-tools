@@ -2,6 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Telegram Channel](https://img.shields.io/badge/Telegram-AI%20Agent%20Lab-2CA5E0?style=flat&logo=telegram)](https://t.me/aiagent_lab_vn)
 
 A curated list of the best **100% Free** and **Ad-supported / Freemium** AI coding agents, copilot alternatives, and vibecoding environments. Say goodbye to restrictive $20/month subscriptions!
 
