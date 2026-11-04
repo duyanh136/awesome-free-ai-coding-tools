@@ -36,10 +36,10 @@ A curated list of the best **100% Free** and **Ad-supported / Freemium** AI codi
 
 ---
 
-## ⚡ Quick Start: Getting Freebuff Up and Running
+## ⚡ Quick Start: Getting Freebuff Up and Running (Full Access)
 
 1. **Activate Bonus Hours**: Navigate to [https://freebuff.com](https://freebuff.com/?ref=ref-85237262-93c4-4b32-8727-d6f70562bf14).
-2. **Authorize via GitHub**: Click "Sign in" using your standard GitHub account.
+2. **Authorize via GitHub (Crucial for Full Access)**: Click "Sign in" using your active GitHub account (or link GitHub in Settings) to unlock Full Access and claim priority inference hours.
 3. **Download Desktop Client**: Grab the installer for Windows (`.exe`), macOS (`.dmg`), or Linux (`.AppImage`).
 4. **Launch & Vibecode**: Open your workspace repository, open the AI agent sidebar, and trigger your first prompt.
 
